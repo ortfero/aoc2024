@@ -28,13 +28,10 @@ func checkXmas(lines []string, i, j int) bool {
 	if i == 0 || i == n-1 {
 		return false
 	}
-	if checkX(lines, i, j, 'M', 'S', 'S', 'M') ||
+	return checkX(lines, i, j, 'M', 'S', 'S', 'M') ||
 		checkX(lines, i, j, 'M', 'M', 'S', 'S') ||
 		checkX(lines, i, j, 'S', 'M', 'M', 'S') ||
-		checkX(lines, i, j, 'S', 'S', 'M', 'M') {
-		return true
-	}
-	return false
+		checkX(lines, i, j, 'S', 'S', 'M', 'M')
 }
 
 func main() {
